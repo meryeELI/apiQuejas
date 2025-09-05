@@ -14,6 +14,9 @@ public class QuejaDTO {
     @Schema(description = "ID del representante asignado", example = "1")
     private Long representanteId;
 
+    @Schema(description = "Nombre del representante asignado", example = "Carlos López")
+    private String representanteNombre;
+
     @Schema(description = "ID del usuario asignado", example = "1")
     private Long usuarioId;
 
@@ -27,6 +30,11 @@ public class QuejaDTO {
 
     public Long getRepresentanteId() { return representanteId; }
     public void setRepresentanteId(Long representanteId) { this.representanteId = representanteId; }
+
+
+    public String getRepresentanteNombre() { return representanteNombre; }
+    public void setRepresentanteNombre(String representanteNombre) { this.representanteNombre = representanteNombre; }
+
 
     public Long getUsuarioId() {return usuarioId;
     }

@@ -28,6 +28,16 @@ public class UsuarioMapper {
 
         dto.setDescripcion(entity.getDescripcion());
         dto.setUsuarioId(entity.getUsuario().getId());
+
+        if (entity.getRepresentante() != null) {
+            dto.setRepresentanteId(entity.getRepresentante().getId());
+            dto.setRepresentanteNombre(entity.getRepresentante().getNombre()); // 👈 Aquí
+        }
+
+        dto.setEstado(entity.getEstado());
+
         return dto;
     }
+
+
 }
