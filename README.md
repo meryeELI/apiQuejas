@@ -32,7 +32,7 @@ src/
  └── test/java/com/example/tienda
      └── Tienda2ApplicationTests.java
 ```
-## Modelo de Datos
+## 🗄️ Modelo de Datos
 ### Usuario
 
 * id (Long, PK)
@@ -58,3 +58,61 @@ src/
 * representante (Relacionada con un Representante)
 * usuario (Relacionada con un Usuario)
 
+🔄 Flujo de Arquitectura
+
+1. Controller recibe la solicitud HTTP.
+2. Service procesa la lógica de negocio.
+3. Repository accede a la base de datos.
+4. Mapper convierte entre Model y DTO.
+5. DTO se devuelve al cliente.
+
+## 🌐 Endpoints Principales
+
+### Quejas
+```
+POST   /api/quejas        → Crear nueva queja
+GET    /api/quejas        → Listar todas las quejas
+PUT    /api/quejas/{id}   → Actualizar queja por ID
+DELETE /api/quejas/{id}   → Eliminar queja por ID
+```
+
+### Usuarios
+```
+POST   /api/usuario               → Crear usuario
+GET    /api/usuario               → Listar todos los usuarios
+GET    /api/usuario/{id}/quejas   → Listar quejas de un usuario
+PUT    /api/usuario/{id}          → Actualizar usuario
+DELETE /api/usuario/{id}          → Eliminar usuario
+```
+
+### Representantes
+```
+POST   /api/representante        → Crear representante
+GET    /api/representante        → Listar representantes
+PUT    /api/representante/{id}   → Actualizar representante
+DELETE /api/representante/{id}   → Eliminar representante
+```
+
+## ⚙️ Configuración y Ejecución
+
+### Requisitos previos
+* Java 17+
+* Maven 3.9+
+* SQLite (opcional, se genera el archivo automáticamente)
+
+## 🛠 Dependencias Principales
+
+* Spring Boot Starter Web → Creación de API REST.
+* Spring Boot Starter Data JPA → Persistencia.
+* SQLite JDBC → Base de datos embebida.
+* Hibernate → ORM.
+* Springdoc OpenAPI UI → Documentación Swagger.
+* Jakarta Validation → Validaciones.
+* JUnit 5 → Pruebas unitarias.
+
+## 👨‍💻 Autores
+
+* Equipo de Desarrollo:
+     * Mery Acevedo
+     * Nestor Ivan Fabian Colocho
+     * Alejandro Ernesto Juarez Argumedo
