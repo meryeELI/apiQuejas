@@ -110,6 +110,18 @@ DELETE /api/representante/{id}   → Eliminar representante
 * Jakarta Validation → Validaciones.
 * JUnit 5 → Pruebas unitarias.
 
+## 🗃 Base de Datos
+
+Se utiliza SQLite con el archivo quejas.db que se genera automáticamente en la raíz del proyecto.
+Configuración en application.properties:
+
+```
+spring.datasource.url=jdbc:sqlite:quejas.db
+spring.datasource.driver-class-name=org.sqlite.JDBC
+spring.jpa.database-platform=org.hibernate.community.dialect.SQLiteDialect
+spring.jpa.hibernate.ddl-auto=update
+```
+
 ## 👨‍💻 Autores
 
 * Equipo de Desarrollo:
