@@ -112,7 +112,7 @@ DELETE /api/representante/{id}   → Eliminar representante
 
 ## 🗃 Base de Datos
 
-Se utiliza SQLite con el archivo quejas.db que se genera automáticamente en la raíz del proyecto.
+Se utiliza SQLite con el archivo quejas.db que se genera automáticamente en la raíz del proyecto.  
 Configuración en application.properties:
 
 ```
